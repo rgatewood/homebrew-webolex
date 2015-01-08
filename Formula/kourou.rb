@@ -3,23 +3,19 @@
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
 
 class Kourou < Formula
-  homepage ""
+  homepage "https://innovate.lexmark.com/groups/vortex-of-pain"
   url "kourou"
   sha1 ""
 
-  # depends_on "cmake" => :build
-  depends_on :x11 # if your formula requires any X11/XQuartz components
+  depends_on "subversion"
+  depends_on "homebrew/apache/httpd24"
+  depends_on "homebrew/php/php55"
 
   def install
     # ENV.deparallelize  # if your formula fails when building in parallel
 
     # Remove unrecognized options if warned by configure
-    system "./configure", "--disable-debug",
-                          "--disable-dependency-tracking",
-                          "--disable-silent-rules",
-                          "--prefix=#{prefix}"
-    # system "cmake", ".", *std_cmake_args
-    system "make", "install" # if this fails, try separate make/make install steps
+
   end
 
   test do
