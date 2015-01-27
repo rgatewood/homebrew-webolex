@@ -2,20 +2,19 @@
 #                /usr/local/Library/Contributions/example-formula.rb
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
 
-class Kourou < Formula
-  homepage "https://innovate.lexmark.com/groups/vortex-of-pain"
-  url "kourou"
-  sha1 ""
+class KourouClient < Formula
+  homepage "https://github.com/LexmarkWeb/kourou-client"
+  url "https://github.com/LexmarkWeb/kourou-client/archive/v0.01.tar.gz"
+  version "0.01"
+  sha1 "0e54561ca12e83c171ebc7c6f72ca879e3b4a07c"
 
   depends_on "subversion"
   depends_on "homebrew/apache/httpd24"
   depends_on "homebrew/php/php55"
 
   def install
-    # ENV.deparallelize  # if your formula fails when building in parallel
 
-    # Remove unrecognized options if warned by configure
-
+    system "awk -f edit-conf.awk /usr/local/etc/apache2/2.4/httpd.conf > temp.conf"
   end
 
   test do
@@ -23,7 +22,7 @@ class Kourou < Formula
     #
     # This test will fail and we won't accept that! It's enough to just replace
     # "false" with the main program this formula installs, but it'd be nice if you
-    # were more thorough. Run the test with `brew test kourou`. Options passed
+    # were more thorough. Run the test with `brew test kourou-client`. Options passed
     # to `brew install` such as `--HEAD` also need to be provided to `brew test`.
     #
     # The installed folder is not in the path, so use the entire path to any
