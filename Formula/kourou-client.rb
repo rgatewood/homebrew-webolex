@@ -14,9 +14,9 @@ class KourouClient < Formula
   depends_on "homebrew/php/php55"
 
   def install
-#    system "make"
     bin.install "bin/kourou"
-#    system "kourou"
+    system "make"
+    system "kourou"
   end
 
   def caveats
