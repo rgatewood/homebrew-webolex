@@ -15,8 +15,6 @@ class KourouClient < Formula
 
   def install
     bin.install "bin/kourou"
-    system "make"
-    system "kourou"
   end
 
   def caveats
