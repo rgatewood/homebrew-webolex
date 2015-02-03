@@ -13,8 +13,13 @@ class KourouClient < Formula
   depends_on "homebrew/php/php55"
 
   def install
+    system "make"
+    bin.install "kourou"
+    system "kourou"
+  end
 
-    system "awk -f edit-conf.awk /usr/local/etc/apache2/2.4/httpd.conf > temp.conf"
+  def caveats
+    "Type 'kourou' at Terminal prompt to start."
   end
 
   test do
