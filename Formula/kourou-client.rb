@@ -5,9 +5,9 @@ require "formula"
 
 class KourouClient < Formula
   homepage "https://github.com/LexmarkWeb/kourou-client"
-  url "https://github.com/LexmarkWeb/kourou-client/archive/v0.03.tar.gz"
-  version "0.03"
-  sha1 "75ff4d9bd24204f2d8647da76ad298274bf32bcc"
+  url "https://github.com/LexmarkWeb/kourou-client/archive/kourou-0.1.tar.gz"
+  version "0.1"
+  sha1 "cab51529b1b601bddc5c4b50c0c674d57d59863f"
 
   depends_on "subversion"
   depends_on "homebrew/apache/httpd24"
