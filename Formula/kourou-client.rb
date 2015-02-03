@@ -1,6 +1,7 @@
 # Documentation: https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/Formula-Cookbook.md
 #                /usr/local/Library/Contributions/example-formula.rb
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
+require "formula"
 
 class KourouClient < Formula
   homepage "https://github.com/LexmarkWeb/kourou-client"
@@ -13,8 +14,8 @@ class KourouClient < Formula
   depends_on "homebrew/php/php55"
 
   def install
-    system "make"
-    bin.install bin/"kourou"
+#    system "make"
+    bin.install "bin/kourou"
 #    system "kourou"
   end
 
