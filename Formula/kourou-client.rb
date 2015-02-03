@@ -4,7 +4,7 @@
 
 class KourouClient < Formula
   homepage "https://github.com/LexmarkWeb/kourou-client"
-  url "https://github.com/LexmarkWeb/kourou-client/archive/v0.02.tar.gz"
+  url "https://github.com/LexmarkWeb/kourou-client/archive/v0.03.tar.gz"
   version "0.02"
   sha1 "6044cd99d19d5020344b53e4125f693add90e26a"
 
@@ -14,8 +14,8 @@ class KourouClient < Formula
 
   def install
     system "make"
-    prefix.install "kourou"
-    system "kourou"
+    bin.install_symlink bin/"kourou"
+#    system "kourou"
   end
 
   def caveats
