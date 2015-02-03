@@ -14,7 +14,7 @@ class KourouClient < Formula
 
   def install
     system "make"
-    bin.install_symlink bin/"kourou"
+    bin.install bin/"kourou"
 #    system "kourou"
   end
 
