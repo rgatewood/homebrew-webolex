@@ -14,7 +14,7 @@ class KourouClient < Formula
 
   def install
     system "make"
-    bin.install "kourou"
+    prefix.install "kourou"
     system "kourou"
   end
 
