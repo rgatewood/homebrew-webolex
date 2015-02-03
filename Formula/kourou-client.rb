@@ -6,7 +6,7 @@ class KourouClient < Formula
   homepage "https://github.com/LexmarkWeb/kourou-client"
   url "https://github.com/LexmarkWeb/kourou-client/archive/v0.03.tar.gz"
   version "0.02"
-  sha1 "6044cd99d19d5020344b53e4125f693add90e26a"
+  sha1 "75ff4d9bd24204f2d8647da76ad298274bf32bcc"
 
   depends_on "subversion"
   depends_on "homebrew/apache/httpd24"
