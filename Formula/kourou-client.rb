@@ -14,12 +14,12 @@ class KourouClient < Formula
   depends_on "homebrew/php/php55"
 
   def install
-    if system("host -W 1 -4 us-auto.proxy.lexmark.com")
-      system "make"
-      bin.install "bin/kourou"
-    else
-      onoe "Oops! You must be on the Lexmark network or VPN to install kourou."
+    rc = system("host -W 1 -4 us-auto.proxy.lexmark.com")
+    if !rc
+      ohai "Oops! You must be on the Lexmark network or VPN to install kourou."
     end
+    system "make"
+    bin.install "bin/kourou"
   end
 
   def caveats
