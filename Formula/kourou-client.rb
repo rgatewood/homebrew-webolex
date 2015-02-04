@@ -27,6 +27,6 @@ class KourouClient < Formula
   end
 
   test do
-    system "#{bin}/kourou-test"
+    system "#{bin}/kourou test"
   end
 end
