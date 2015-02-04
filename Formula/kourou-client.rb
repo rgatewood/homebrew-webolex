@@ -17,7 +17,7 @@ class KourouClient < Formula
     if !Kernel.system("host -W 1 -4 us-auto.proxy.lexmark.com")
       onoe "Oops! You should be on the Lexmark network or VPN to install kourou."
     else
-      system "make", "--prefix=#{prefix}"
+      system "make", "prefix=#{HOMEBREW_PREFIX}"
       bin.install "bin/kourou"
     end
   end
