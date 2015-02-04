@@ -5,9 +5,9 @@ require "formula"
 
 class KourouClient < Formula
   homepage "https://github.com/LexmarkWeb/kourou-client"
-  url "https://github.com/LexmarkWeb/kourou-client/archive/kourou-0.1.tar.gz"
-  version "0.1"
-  sha1 "cab51529b1b601bddc5c4b50c0c674d57d59863f"
+  url "https://github.com/LexmarkWeb/kourou-client/archive/kourou-0.11.tar.gz"
+  version "0.11"
+  sha1 "4a5e60ff51bf6f8809519ef9f089499c3d0445d7"
 
   depends_on "subversion"
   depends_on "homebrew/apache/httpd24"
@@ -15,7 +15,7 @@ class KourouClient < Formula
 
   def install
     if !system("host -W 1 -4 us-auto.proxy.lexmark.com")
-      onoe "Oops! You must be on Lexmark network or VPN to install kourou."
+      onoe "Oops! You must be on the Lexmark network or VPN to install kourou."
     end
     system "make"
     bin.install "bin/kourou"
