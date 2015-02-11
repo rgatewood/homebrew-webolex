@@ -11,7 +11,7 @@ class KourouClient < Formula
 
   depends_on "subversion"
   depends_on "homebrew/apache/httpd24"
-  depends_on "homebrew/php/php55"
+  depends_on "homebrew/php/php55" => "homebrew-apxs"
 
   def install
     if !Kernel.system("host -W 1 -4 us-auto.proxy.lexmark.com")
